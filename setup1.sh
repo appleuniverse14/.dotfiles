@@ -1,20 +1,32 @@
+echo ""
+echo ""
 echo "zshのインストールまでを行います。zshのインストール後、setup2.shを実行してください。"
+echo ""
+echo ""
 
 # パスワード入力
-read -sp "パスワードを入力してください: " password
+read -sp "パスワードを入力してください: " PASSWORD
 
 yes | sudo apt update
 yes | sudo apt upgrade
 
 # パッケージのインストール
-yes | sudo apt install zsh git vim neovim openssh-server tmux
+yes | sudo apt install zsh git vim neovim openssh-server tmux tree curl
 
 # その他リポジトリなどをインストール
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+# Google Chrome
+sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+sudo wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+sudo apt install google-chrome-stable
 
 # デフォルトのログインシェルをzshに変更
-echo $password | chsh -s /bin/zsh
+echo $PASSWORD | chsh -s /bin/zsh
+echo ""
 echo ""
 echo "シェルをzshに変更します。そのために、パソコンを再起動してください。"
+echo "パソコンを再起動したら、setup2.shを実行してください。"
+echo ""
+echo ""

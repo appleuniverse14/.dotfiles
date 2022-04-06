@@ -1,2 +1,2 @@
 # ubuntu_setup
-Environment setup for Ubuntu
+Setup environment for Ubuntu
