@@ -1,0 +1,21 @@
+[user]
+	name = taizo122
+	email = pocketspla@gmail.com
+[http]
+	sslVerify = False
+[credential]
+	helper = cache
+[push]
+	default = simple
+	recurseSubmodules = check
+[core]
+	editor = vim
+[alias]
+	cm = commit -m
+	ada = add -A
+	st = status
+	co = checkout
+	clore = clone --recursive
+	br = branch
+	subup = submodule update --init --recursive
+	sgl = log --graph --oneline --decorate --all --pretty='format:%C(yellow)%h %C(reset)%s %C(red)%d %C(cyan)[%an]'
