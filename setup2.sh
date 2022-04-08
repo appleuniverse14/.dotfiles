@@ -4,10 +4,18 @@ git clone https://github.com/taizoyuasa/ubuntu_setup.git ~/ubuntu_setup
 cp ~/ubuntu_setup/.zshrc ~/.zshrc
 cp ~/ubuntu_setup/.gitconfig ~/.gitconfig
 cp ~/ubuntu_setup/.vimrc ~/.vimrc
+
+# VimのDraculaテーマをインストール
+mkdir -p ~/.vim/pack/themes/start
+cd ~/.vim/pack/themes/start
+git clone https://github.com/dracula/vim.git dracula
+
+# lsdをインストール
+sudo snap install lsd
+
+# powerlevel10kのためにシェルを再起動
 cd ~/
 sudo rm -rf ~/ubuntu_setup
-
-# powerlevel10kの再起動
 echo ""
 echo ""
 echo ""
