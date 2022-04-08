@@ -76,7 +76,8 @@ precmd () { vcs_info }
 # 環境変数
 # --------------------------------------------------------------------
 export LANG=ja_JP.UTF-8
-export LS_COLORS='di=34:fi=0:ln=33:pi=5:so=5:bd=5:cd=5:or=0101:mi=0:ex=35:*.rpm=90'
+LS_COLORS='di=34:fi=0:ln=33:pi=5:so=5:bd=5:cd=5:or=0101:mi=0:ex=35:*.rpm=90'
+export LS_COLORS
 # --------------------------------------------------------------------
 # alias
 # --------------------------------------------------------------------
@@ -87,7 +88,7 @@ alias la='ls -laF'
 alias g++="g++ -std=c++17 -Wall -Wextra -Wconversion -pedantic"
 alias gcc="gcc -std=c99 -Wall -Wextra"
 alias relogin='exec $SHELL -l'
-alias ls="ls --color"
+alias ls="lsd"
 alias dirs="dirs -v"
 # --------------------------------------------------------------------
 # その他
