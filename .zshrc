@@ -81,14 +81,13 @@ export LS_COLORS
 # --------------------------------------------------------------------
 # alias
 # --------------------------------------------------------------------
-alias ls='ls -G'
-alias lla='ll -A'
-alias ll='ls -l'
+alias ls='lsd'
 alias la='ls -laF'
+alias ll='ls -l'
+alias lla='ll -A'
 alias g++="g++ -std=c++17 -Wall -Wextra -Wconversion -pedantic"
 alias gcc="gcc -std=c99 -Wall -Wextra"
 alias relogin='exec $SHELL -l'
-alias ls="lsd"
 alias dirs="dirs -v"
 # --------------------------------------------------------------------
 # その他

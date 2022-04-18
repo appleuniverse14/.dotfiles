@@ -1,22 +1,21 @@
 # dotfilesの設定
-sudo rm -rf ~/.zshrc
-git clone https://github.com/taizoyuasa/ubuntu_setup.git ~/ubuntu_setup
-cp ~/ubuntu_setup/.zshrc ~/.zshrc
-cp ~/ubuntu_setup/.gitconfig ~/.gitconfig
-cp ~/ubuntu_setup/.vimrc ~/.vimrc
-cp ~/ubuntu_setup/.tmux.conf ~/.tmux.conf
+sudo rm -rf $HOME/.zshrc
+cp $HOME/ubuntu_setup/.zshrc $HOME/.zshrc
+cp $HOME/ubuntu_setup/.gitconfig $HOME/.gitconfig
+cp $HOME/ubuntu_setup/.vimrc $HOME/.vimrc
+cp $HOME/ubuntu_setup/.tmux.conf $HOME/.tmux.conf
 
 # VimのDraculaテーマをインストール
-mkdir -p ~/.vim/pack/themes/start
-cd ~/.vim/pack/themes/start
+mkdir -p $HOME/.vim/pack/themes/start
+cd $HOME/.vim/pack/themes/start
 git clone https://github.com/dracula/vim.git dracula
 
 # lsdをインストール
 sudo snap install lsd
 
 # powerlevel10kのためにシェルを再起動
-cd ~/
-sudo rm -rf ~/ubuntu_setup
+cd $HOME/
+sudo rm -rf $HOME/ubuntu_setup
 echo ""
 echo ""
 echo ""
