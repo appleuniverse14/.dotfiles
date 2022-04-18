@@ -10,9 +10,6 @@ mkdir -p $HOME/.vim/pack/themes/start
 cd $HOME/.vim/pack/themes/start
 git clone https://github.com/dracula/vim.git dracula
 
-# lsdをインストール
-sudo snap install lsd
-
 # powerlevel10kのためにシェルを再起動
 cd $HOME/
 sudo rm -rf $HOME/ubuntu_setup
