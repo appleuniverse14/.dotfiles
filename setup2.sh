@@ -4,6 +4,7 @@ git clone https://github.com/taizoyuasa/ubuntu_setup.git ~/ubuntu_setup
 cp ~/ubuntu_setup/.zshrc ~/.zshrc
 cp ~/ubuntu_setup/.gitconfig ~/.gitconfig
 cp ~/ubuntu_setup/.vimrc ~/.vimrc
+cp ~/ubuntu_setup/.tmux.conf ~/.tmux.conf
 
 # VimのDraculaテーマをインストール
 mkdir -p ~/.vim/pack/themes/start
