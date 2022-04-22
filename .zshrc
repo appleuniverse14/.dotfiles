@@ -97,6 +97,12 @@ gitacp() {
     git commit -m "$*"
     git push origin HEAD
 }
+
+# 端末起動時にtmuxセッションを開始
+if [[ ! -n $TMUX ]]; then
+  tmux new-session
+fi
+
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
