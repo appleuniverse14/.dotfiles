@@ -98,6 +98,20 @@ gitacp() {
     git push origin HEAD
 }
 
+function gcc2(){
+    FILENAME=$(basename $1);
+    CFILE=$(basename $1 .c);
+    gcc -o $CFILE -lm -ansi -pedantic -Wall -g3 $FILENAME;
+}
+alias gcc2=gcc2
+
+function g++2(){
+    FILENAME=$(basename $1);
+    CFILE=$(basename $1 .cpp);
+    g++ -o $CFILE -lm -ansi -pedantic -Wall -g3 $FILENAME;
+}
+alias g++2=g++2
+
 # 端末起動時にtmuxセッションを開始
 if [[ ! -n $TMUX ]]; then
   tmux new-session
