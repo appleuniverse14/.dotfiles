@@ -19,6 +19,7 @@ colorscheme dracula
 set relativenumber
 set number
 set scrolloff=999
+set expandtab
 set tabstop=4
 set shiftwidth=4
 set cursorline
