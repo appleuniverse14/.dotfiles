@@ -101,14 +101,14 @@ gitacp() {
 function gcc2(){
     FILENAME=$(basename $1);
     CFILE=$(basename $1 .c);
-    gcc -o $CFILE -lm -ansi -pedantic -Wall -g3 $FILENAME;
+    gcc -o $CFILE -lm -ansi -pedantic -Wall -Wextra -g3 $FILENAME -lm;
 }
 alias gcc=gcc2
 
 function g++2(){
     FILENAME=$(basename $1);
     CFILE=$(basename $1 .cpp);
-    g++ -o $CFILE -lm -ansi -pedantic -Wall -g3 $FILENAME;
+    g++ -o $CFILE -lm -ansi -pedantic -Wall -Wextra -g3 $FILENAME -lm;
 }
 alias g++=g++2
 
