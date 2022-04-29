@@ -78,6 +78,7 @@ precmd () { vcs_info }
 export LANG=ja_JP.UTF-8
 LS_COLORS='di=34:fi=0:ln=33:pi=5:so=5:bd=5:cd=5:or=0101:mi=0:ex=35:*.rpm=90'
 export LS_COLORS
+PATH="$PATH:$HOME/.cargo/bin"
 # --------------------------------------------------------------------
 # alias
 # --------------------------------------------------------------------
@@ -85,10 +86,10 @@ alias ls='lsd'
 alias la='ls -laF'
 alias ll='ls -l'
 alias lla='ll -A'
-alias g++="g++ -std=c++17 -Wall -Wextra -Wconversion -pedantic"
-alias gcc="gcc -std=c99 -Wall -Wextra"
+alias g++='g++ -std=c++17 -Wall -Wextra -Wconversion -pedantic'
+alias gcc='gcc -std=c99 -Wall -Wextra'
 alias relogin='exec $SHELL -l'
-alias dirs="dirs -v"
+alias dirs='dirs -v'
 # --------------------------------------------------------------------
 # その他
 # --------------------------------------------------------------------
