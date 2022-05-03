@@ -14,7 +14,8 @@ packadd! dracula
 syntax enable
 
 colorscheme dracula
-"colorscheme hybrid"
+
+inoremap <silent> jj <ESC>
 
 set relativenumber
 set number
