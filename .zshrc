@@ -79,6 +79,7 @@ export LANG=ja_JP.UTF-8
 LS_COLORS='di=34:fi=0:ln=33:pi=5:so=5:bd=5:cd=5:or=0101:mi=0:ex=35:*.rpm=90'
 export LS_COLORS
 PATH="$PATH:$HOME/.cargo/bin"
+export DISPLAY=localhost:0
 export CC=/usr/bin/clang-14
 export CXX=/usr/bin/clang++-14
 # --------------------------------------------------------------------
