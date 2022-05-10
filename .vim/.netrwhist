@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/taizo/Lecture/52_HardwareDesign/week04'
+let g:netrw_dirhist_0='/home/taizo/Lecture/00_experiment/04_I1I2I3/Day2'
+let g:netrw_dirhist_9='/home/taizo/Lecture/00_experiment/04_I1I2I3'
+let g:netrw_dirhist_8='/home/taizo/Lecture/00_experiment/04_I1I2I3/Day4'
+let g:netrw_dirhist_7='/home/taizo/Lecture/00_experiment/04_I1I2I3'
+let g:netrw_dirhist_6='/home/taizo/Lecture/00_experiment/04_I1I2I3/Day4'
+let g:netrw_dirhist_5='/home/taizo/Lecture/00_experiment/04_I1I2I3/Day2'
+let g:netrw_dirhist_4='/home/taizo/Lecture/00_experiment/04_I1I2I3'
+let g:netrw_dirhist_3='/home/taizo/Lecture/00_experiment/04_I1I2I3/Day4'
+let g:netrw_dirhist_2='/home/taizo/Lecture/00_experiment/04_I1I2I3/Day2'

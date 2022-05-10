@@ -1,3 +1,34 @@
+""プラグインの設定""
+call plug#begin('~/.vim/plugged')
+    Plug 'https://github.com/cohama/lexima.vim'
+    Plug 'https://github.com/Shougo/deoplete.nvim'
+    Plug 'https://github.com/roxma/nvim-yarp'
+    Plug 'https://github.com/roxma/vim-hug-neovim-rpc'
+    Plug 'thinca/vim-quickrun'
+    Plug 'Yggdroot/indentLine'
+    Plug 'lervag/vimtex'
+call plug#end()
+"-------------------------------------------------
+" インデントを可視化するプラグイン indentLine
+"-------------------------------------------------
+let g:indentLine_color_term = 111
+let g:indentLine_color_gui = '#708090'
+let g:indentLine_char = '¦' "use ¦, ┆ or │
+"-------------------------------------------------
+" quickrun
+"-------------------------------------------------
+let g:quickrun_config = {
+\   'tex': {
+\       'command': 'latexmk',
+\       'exec': ['%c -gg -pdfdvi %s', 'xdg-open %s:r.pdf']
+\   },
+\}
+"-------------------------------------------------
+" deoplete
+"-------------------------------------------------
+let g:deoplete#enable_at_startup = 1
+
+""その他""
 function! s:clang_format()
     let now_line = line(".")
     exec ":%! clang-format-6.0-robotech"
@@ -15,8 +46,6 @@ syntax enable
 
 colorscheme dracula
 
-inoremap <silent> jj <ESC>
-
 set relativenumber
 set number
 set scrolloff=999
@@ -27,6 +56,13 @@ set cursorline
 set hlsearch
 set cindent
 
+
+packadd termdebug 
+""マウスを使用"
+set mouse=a
+let g:termdebug_wide = 163
+
+
 "カーソル表示を変更"
 if has('vim_starting')
     " 挿入モード時に非点滅の縦棒タイプのカーソル
@@ -36,13 +72,6 @@ if has('vim_starting')
     " 置換モード時に非点滅の下線タイプのカーソル
     let &t_SR .= "\e[4 q"
 endif
-
-"括弧とクォーテーションの自動補完"
-inoremap { {}<LEFT>
-inoremap [ []<LEFT>
-inoremap ( ()<LEFT>
-inoremap " ""<LEFT>
-inoremap ' ''<LEFT>
 
 "カーソル位置の記憶"
 augroup vimrcEx
