@@ -13,8 +13,15 @@ yes | sudo apt update
 yes | sudo apt upgrade
 
 # パッケージのインストール
-yes | sudo apt install zsh git wget vim neovim openssh-server tmux tree curl cargo python3-pip
+yes | sudo apt install zsh git wget vim neovim openssh-server tmux tree curl cargo python3-pip xsel xclip nodejs npm ripgrep
 cargo install lsd
+pip3 install pynvim
+
+# node.jsのインストール
+sudo npm install n -g
+sudo n lts
+sudo apt purge nodejs npm
+sudo npm install -g yarn
 
 # その他リポジトリなどをインストール
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/powerlevel10k
