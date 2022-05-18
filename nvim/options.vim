@@ -3,6 +3,7 @@
 ""-------------------------------------------------
 set termguicolors " True Color対応
 set title " ターミナルのタブ名に現在編集中のファイル名を設定
+set number
 set relativenumber
 set scrolloff=999
 set wrap " 行を折り返す
