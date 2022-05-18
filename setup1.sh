@@ -31,6 +31,9 @@ git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.zsh/zsh-autosu
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
 rm -rf ./google-chrome-stable_current_amd64.deb
+# VSCodeのインストール
+curl -L https://go.microsoft.com/fwlink/?LinkID=760868 -o vscode.deb
+sudo apt install ./vscode.deb
 
 # デフォルトのログインシェルをzshに変更
 echo $PASSWORD | chsh -s /bin/zsh
