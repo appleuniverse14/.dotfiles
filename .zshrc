@@ -38,6 +38,8 @@ setopt hist_ignore_all_dups
 # 候補を選ぶには <Tab> か Ctrl-N,B,F,P
 # --------------------------------------------------------------------
 setopt hist_ignore_all_dups
+# historyの共有
+setopt sharehistory
 zstyle ':completion:*:default' menu select=1
 
 # 大文字小文字に関わらず, 候補が見つからない時のみ文字種を無視した補完をする
@@ -92,6 +94,8 @@ alias g++='g++ -std=c++17 -Wall -Wextra -Wconversion -pedantic'
 alias gcc='gcc -std=c99 -Wall -Wextra'
 alias relogin='exec $SHELL -l'
 alias dirs='dirs -v'
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
 # --------------------------------------------------------------------
 # その他
 # --------------------------------------------------------------------
@@ -104,7 +108,7 @@ gitacp() {
 function gcc2(){
     FILENAME=$(basename $1);
     CFILE=$(basename $1 .c);
-    gcc -o $CFILE -lm -ansi -pedantic -Wall -Wextra -g3 $FILENAME -lm;
+    gcc -o $CFILE -lm -ansi -pedantic -Wall -Wextra -g3 -std=c11 $FILENAME -lm;
 }
 alias gcc=gcc2
 
@@ -120,8 +124,10 @@ if [[ ! -n $TMUX ]]; then
   tmux new-session
 fi
 
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
