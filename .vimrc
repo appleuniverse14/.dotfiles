@@ -4,6 +4,10 @@ call plug#begin('~/.vim/plugged')
     Plug 'https://github.com/Shougo/deoplete.nvim'
     Plug 'https://github.com/roxma/nvim-yarp'
     Plug 'https://github.com/roxma/vim-hug-neovim-rpc'
+    Plug 'https://github.com/markonm/traces.vim'
+    Plug 'https://github.com/airblade/vim-gitgutter'
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
     Plug 'thinca/vim-quickrun'
     Plug 'Yggdroot/indentLine'
     Plug 'lervag/vimtex'
@@ -46,6 +50,12 @@ syntax enable
 
 colorscheme dracula
 
+
+"-------------------------------------------------
+" 見た目
+"-------------------------------------------------
+set termguicolors " True Color対応
+set title " ターミナルのタブ名に現在編集中のファイル名を設定
 set relativenumber
 set number
 set scrolloff=999
@@ -56,12 +66,14 @@ set cursorline
 set hlsearch
 set cindent
 
-
 packadd termdebug 
 ""マウスを使用"
 set mouse=a
 let g:termdebug_wide = 163
+inoremap <silent> jj <ESC>
 
+"クリップボードを使用"
+set clipboard=unnamedplus
 
 "カーソル表示を変更"
 if has('vim_starting')

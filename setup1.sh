@@ -13,8 +13,15 @@ yes | sudo apt update
 yes | sudo apt upgrade
 
 # パッケージのインストール
-yes | sudo apt install zsh git wget vim neovim openssh-server tmux tree curl cargo python3-pip
+yes | sudo apt install zsh git wget vim-gtk neovim openssh-server tmux tree curl cargo python3-pip xsel xclip nodejs npm ripgrep fonts-ricty-diminished
 cargo install lsd
+pip3 install pynvim
+
+# node.jsのインストール
+sudo npm install n -g
+sudo n lts
+sudo apt purge nodejs npm
+sudo npm install -g yarn
 
 # その他リポジトリなどをインストール
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/powerlevel10k
@@ -24,6 +31,9 @@ git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.zsh/zsh-autosu
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
 rm -rf ./google-chrome-stable_current_amd64.deb
+# VSCodeのインストール
+curl -L https://go.microsoft.com/fwlink/?LinkID=760868 -o vscode.deb
+sudo apt install ./vscode.deb
 
 # デフォルトのログインシェルをzshに変更
 echo $PASSWORD | chsh -s /bin/zsh

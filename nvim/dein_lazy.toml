@@ -1,0 +1,51 @@
+# 補完
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+on_event = 'InsertEnter'
+hook_add = '''
+  let g:deoplete#enable_at_startup = 1
+  inoremap <expr><Tab> pumvisible() ? "\<DOWN>" : "\<Tab>"
+  inoremap <expr><S-Tab> pumvisible() ? "\<UP>" : "\<S-Tab>"
+'''
+
+
+
+#--------------------
+# 見た目
+#--------------------
+# ファイルツリーを表示
+[[plugins]]
+repo = "Shougo/defx.nvim"
+[[plugins]]
+repo = "roxma/nvim-yarp"
+[[plugins]]
+repo = "roxma/vim-hug-neovim-pc"
+
+#[[plugins]]
+#repo = 'scrooloose/nerdtree'
+#depends = ['ryanoasis/vim-devicons']
+#on_event='NERDTreeToggle'
+#hook_add='''
+#nnoremap <silent> <Leader>e :NERDTreeToggle<CR>
+#'''
+#
+## file icon for filetree
+#[[plugins]]
+#repo = 'ryanoasis/vim-devicons'
+#on_source='nerdtree'
+
+
+
+#--------------------
+# その他
+#--------------------
+# vimを閉じずに編集中のファイルを素早く実行する
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+# hook_add = '''
+# source ~/.cache/dein/repos/github.com/vim-quickrun.vim
+# '''
+# quick runに必要なライブラリ(非同期処理)
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+
