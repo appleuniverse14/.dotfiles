@@ -72,6 +72,9 @@ set mouse=a
 let g:termdebug_wide = 163
 inoremap <silent> jj <ESC>
 
+"クリップボードを使用"
+set clipboard=unnamedplus
+
 "カーソル表示を変更"
 if has('vim_starting')
     " 挿入モード時に非点滅の縦棒タイプのカーソル

@@ -23,6 +23,9 @@ filetype plugin indent on
 syntax enable "syntax highlightの有効化
 let g:fern#renderer = 'nerdfont'
 
+"クリップボードを使用"
+set clipboard=unnamedplus
+
 " defx.nvimの設定
 autocmd FileType defx call s:defx_my_settings()
 
@@ -92,7 +95,7 @@ function! s:defx_my_settings() abort
   \ defx#do_action('change_vim_cwd')
 endfunction
 
-autocmd VimEnter * execute 'Defx'
+" autocmd VimEnter * execute 'Defx'
 nnoremap <silent> <Leader>f :<C-u> Defx <CR>
 call defx#custom#option('_', {
       \ 'winwidth': 30,

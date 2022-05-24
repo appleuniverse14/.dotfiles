@@ -13,7 +13,7 @@ yes | sudo apt update
 yes | sudo apt upgrade
 
 # パッケージのインストール
-yes | sudo apt install zsh git wget vim neovim openssh-server tmux tree curl cargo python3-pip xsel xclip nodejs npm ripgrep fonts-ricty-diminished
+yes | sudo apt install zsh git wget vim-gtk neovim openssh-server tmux tree curl cargo python3-pip xsel xclip nodejs npm ripgrep fonts-ricty-diminished
 cargo install lsd
 pip3 install pynvim
 
