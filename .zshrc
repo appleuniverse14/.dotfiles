@@ -115,7 +115,7 @@ alias gcc=gcc2
 function g++2(){
     FILENAME=$(basename $1);
     CFILE=$(basename $1 .cpp);
-    g++ -o $CFILE -lm -ansi -pedantic -Wall -Wextra -g3 $FILENAME -lm;
+    g++ -o $CFILE -lm -ansi -pedantic -Wall -Wextra -g3 -std=c++11 $FILENAME -lm;
 }
 alias g++=g++2
 
