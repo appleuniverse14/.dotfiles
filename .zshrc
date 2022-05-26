@@ -96,6 +96,7 @@ alias relogin='exec $SHELL -l'
 alias dirs='dirs -v'
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
+alias v='nvim'
 # --------------------------------------------------------------------
 # その他
 # --------------------------------------------------------------------
@@ -108,16 +109,16 @@ gitacp() {
 function gcc2(){
     FILENAME=$(basename $1);
     CFILE=$(basename $1 .c);
-    gcc -o $CFILE -lm -ansi -pedantic -Wall -Wextra -g3 -std=c11 $FILENAME -lm;
+    gcc -o $CFILE -ansi -pedantic -Wall -Wextra -g3 -std=c11 $FILENAME -lm -lpulse -lpulse-simple;
 }
-alias gcc=gcc2
+# alias gcc=gcc2
 
 function g++2(){
     FILENAME=$(basename $1);
     CFILE=$(basename $1 .cpp);
-    g++ -o $CFILE -lm -ansi -pedantic -Wall -Wextra -g3 $FILENAME -lm;
+    g++ -o $CFILE -ansi -pedantic -Wall -Wextra -g3 $FILENAME -lm;
 }
-alias g++=g++2
+# alias g++=g++2
 
 # 端末起動時にtmuxセッションを開始
 if [[ ! -n $TMUX ]]; then
