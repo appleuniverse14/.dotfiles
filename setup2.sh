@@ -7,7 +7,6 @@ cp $HOME/ubuntu_setup/.tmux.conf $HOME/.tmux.conf
 cp -r $HOME/ubuntu_setup/nvim $HOME/.config
 # powerlevel10kのためにシェルを再起動
 cd $HOME/
-sudo rm -rf $HOME/ubuntu_setup
 echo ""
 echo ""
 echo ""

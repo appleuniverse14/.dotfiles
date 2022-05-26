@@ -71,6 +71,8 @@ packadd termdebug
 set mouse=a
 let g:termdebug_wide = 163
 inoremap <silent> jj <ESC>
+inoremap <C-a> <home>
+inoremap <C-e> <End>
 
 "クリップボードを使用"
 set clipboard=unnamedplus
