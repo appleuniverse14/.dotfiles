@@ -83,6 +83,7 @@ export LS_COLORS
 PATH="$PATH:$HOME/.cargo/bin"
 export CC=/usr/bin/clang-14
 export CXX=/usr/bin/clang++-14
+export FLIER_ECAT_IFNAME_1='enp7s0f1' # LANポート
 # --------------------------------------------------------------------
 # alias
 # --------------------------------------------------------------------
@@ -97,6 +98,8 @@ alias dirs='dirs -v'
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 alias v='nvim'
+alias cubeprogrammer='sudo /usr/local/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin/STM32CubeProgrammer'
+alias cubemx='sudo /usr/local/STMicroelectronics/STM32Cube/STM32CubeMX/STM32CubeMX'
 # --------------------------------------------------------------------
 # その他
 # --------------------------------------------------------------------

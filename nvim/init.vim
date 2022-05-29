@@ -121,3 +121,18 @@ call defx#custom#column('git', 'indicators', {
 
 autocmd BufWritePost * call defx#redraw()
 autocmd BufEnter * call defx#redraw()
+
+"-------------------------------------------------
+" quickrun
+"-------------------------------------------------
+let g:quickrun_config = {
+\   'tex': {
+\       'command': 'latexmk',
+\       'exec': ['%c -gg -pdfdvi %s', 'xdg-open %s:r.pdf']
+\   },
+\}
+
+"-------------------------------------------------
+" deoplete
+"-------------------------------------------------
+let g:deoplete#enable_at_startup = 1

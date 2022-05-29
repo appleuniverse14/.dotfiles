@@ -16,12 +16,6 @@ set expandtab " softtabstop や shiftwidth で設定されている値分のス�
 set tabstop=4 " スペースn個分で1つのタブとしてカウントするか
 set softtabstop=4 " <tab>を押したとき、n個のスペースを挿入
 set shiftwidth=4 " <Enter>や<<, >>などを押したとき、n個のスペースを挿入
-""いい感じにカーソルがハイライトされる""
-augroup vimrc-auto-cursorline
-    autocmd!
-    autocmd CursorMoved,CursorMovedI,WinLeave * setlocal nocursorline
-    autocmd CursorHold,CursorHoldI * setlocal cursorline
-augroup END
 ""カーソル表示を変更""
 if has('vim_starting')
     " 挿入モード時に非点滅の縦棒タイプのカーソル
