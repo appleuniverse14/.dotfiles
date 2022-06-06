@@ -1,3 +1,4 @@
+#!/bin/zsh
 echo ""
 echo ""
 echo "zshのインストールまでを行います。zshのインストール後、setup2.shを実行してください。"
@@ -6,23 +7,22 @@ echo ""
 
 # パスワード入力
 read -sp "パスワードを入力してください: " PASSWORD
-
 cd $HOME
 
-yes | sudo apt update
-yes | sudo apt upgrade
+sudo apt update -y
+sudo apt upgrade -y
 
 # パッケージのインストール
-yes | sudo apt install zsh git wget vim-gtk neovim openssh-server tmux tree curl cargo python3-pip xsel xclip nodejs nodejs-dev node-gyp libssl1.0-dev fonts-ricty-diminished
-yes | sudo apt install npm
+sudo apt install -y zsh git wget vim-gtk neovim openssh-server tmux tree curl cargo python3-pip xsel xclip nodejs nodejs-dev node-gyp libssl1.0-dev fonts-ricty-diminished
+sudo apt install -y npm
 cargo install lsd
 pip3 install pynvim
 
 # node.jsのインストール
-sudo npm install n -g
-sudo n lts
-sudo apt purge nodejs npm
-sudo npm install -g yarn
+sudo npm install n -g -y
+sudo n lts -y
+sudo apt purge -y nodejs npm
+sudo npm install -g -y yarn
 
 # その他リポジトリなどをインストール
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/powerlevel10k
@@ -31,6 +31,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/.zsh/zsh-autosu
 # fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
+# plug.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 # dein.vim
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
 sh ./installer.sh ~/.cache/dein
