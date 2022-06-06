@@ -94,12 +94,14 @@ alias lla='ll -A'
 alias g++='g++ -std=c++17 -Wall -Wextra -Wconversion -pedantic'
 alias gcc='gcc -std=c99 -Wall -Wextra'
 alias relogin='exec $SHELL -l'
+alias python='python3'
 alias dirs='dirs -v'
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 alias v='nvim'
 alias cubeprogrammer='sudo /usr/local/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin/STM32CubeProgrammer'
 alias cubemx='sudo /usr/local/STMicroelectronics/STM32Cube/STM32CubeMX/STM32CubeMX'
+alias eagle='/opt/eagle-9.6.2/eagle'
 # --------------------------------------------------------------------
 # その他
 # --------------------------------------------------------------------
@@ -112,7 +114,7 @@ gitacp() {
 function gcc2(){
     FILENAME=$(basename $1);
     CFILE=$(basename $1 .c);
-    gcc -o $CFILE -ansi -pedantic -Wall -Wextra -g3 -std=c11 $FILENAME -lm -lpulse -lpulse-simple;
+    gcc -o $CFILE -ansi -pedantic -Wall -Wextra -g3 -O3 -std=c11 $FILENAME -lm -lpulse -lpulse-simple -pthread -lspeexdsp;
 }
 # alias gcc=gcc2
 
