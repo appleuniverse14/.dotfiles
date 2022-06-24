@@ -1,19 +1,10 @@
 # dotfilesの設定
-sudo rm -rf $HOME/.zshrc
-cp $HOME/ubuntu_setup/.zshrc $HOME
-cp $HOME/ubuntu_setup/.gitconfig $HOME/.gitconfig
-cp $HOME/ubuntu_setup/.vimrc $HOME/.vimrc
-cp $HOME/ubuntu_setup/.tmux.conf $HOME/.tmux.conf
-cp -r $HOME/ubuntu_setup/nvim $HOME/.config
+ln -sf $HOME/.dotfiles/.zshrc $HOME/.zshrc
+ln -sf $HOME/.dotfiles/.vimrc $HOME/.vimrc
+rm -rf $HOME/.config/nvim
+ln -sf $HOME/.dotfiles/nvim $HOME/.config
+ln -sf $HOME/.dotfiles/.tmux.conf $HOME/.tmux.conf
+ln -sf $HOME/.dotfiles/.gitconfig $HOME/.gitconfig
 # powerlevel10kのためにシェルを再起動
-cd $HOME/
-echo ""
-echo ""
-echo ""
-echo "powerlevel10kの設定のため、3秒後にシェルを再起動します。"
-echo "これで環境構築は終わりです。お疲れ様でした!!!"
-echo ""
-echo ""
-echo ""
-sleep 3
+sleep 1
 exec $SHELL -l

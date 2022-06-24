@@ -1,13 +1,7 @@
 #!/bin/zsh
-echo ""
-echo ""
-echo "zshのインストールまでを行います。zshのインストール後、setup2.shを実行してください。"
-echo ""
-echo ""
 
 # パスワード入力
 read -sp "パスワードを入力してください: " PASSWORD
-cd $HOME
 
 sudo apt update -y
 sudo apt upgrade -y
@@ -16,7 +10,7 @@ sudo apt upgrade -y
 sudo apt install -y zsh git wget vim-gtk neovim openssh-server tmux tree curl cargo python3-pip xsel xclip nodejs nodejs-dev node-gyp libssl1.0-dev fonts-ricty-diminished
 sudo apt install -y npm
 cargo install lsd
-pip3 install pynvim
+pip3 install pynvim neovim
 
 # node.jsのインストール
 sudo npm install n -g -y
@@ -53,8 +47,8 @@ sudo apt install ./vscode.deb
 echo $PASSWORD | chsh -s /bin/zsh
 echo ""
 echo ""
-echo "まず、FiraCode Nerd Fontをnerdfonts.com/font-downloadsからダウンロードしてください。"
-echo "次に、シェルをzshに変更します。そのために、パソコンを再起動してください。"
-echo "パソコンを再起動したら、setup2.shを実行してください。"
+echo "1. Install 'FiraCode Nerd Font' from nerdfonts.com/font-downloads"
+echo "2. Reboot your PC"
+echo "3. Run setup2.sh"
 echo ""
 echo ""

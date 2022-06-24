@@ -114,7 +114,7 @@ gitacp() {
 function gcc2(){
     FILENAME=$(basename $1);
     CFILE=$(basename $1 .c);
-    gcc -o $CFILE -ansi -pedantic -Wall -Wextra -g3 -O3 -std=c11 $FILENAME -lm -lpulse -lpulse-simple -pthread -lspeexdsp;
+    gcc -o $CFILE -ansi -pedantic -Wall -Wextra -g3 -O3 -std=c11 $FILENAME -lm;
 }
 # alias gcc=gcc2
 

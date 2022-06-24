@@ -1,0 +1,15 @@
+# 最初にすべての階層のファイルを無視し、必要なファイルのみ除外
+/*
+/.**
+
+!/setup1.sh
+!/setup2.sh
+!/README.md
+!/.zshrc
+!/.vimrc
+!/nvim/
+!/.tmux.conf
+!/.gitconfig
+!/.git/
+!/.gitignore
+
