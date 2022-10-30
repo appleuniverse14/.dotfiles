@@ -141,6 +141,10 @@ rev = 'release'
 # source ~/.config/nvim/plugins/coc.vim
 # '''
 
+# live server的なやつ
+[[plugins]]
+repo = 'turbio/bracey.vim'
+
 # LaTeX
 [[plugins]]
 repo = 'lervag/vimtex'
