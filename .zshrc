@@ -99,9 +99,6 @@ alias dirs='dirs -v'
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 alias v='nvim'
-alias cubeprogrammer='sudo /usr/local/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin/STM32CubeProgrammer'
-alias cubemx='sudo /usr/local/STMicroelectronics/STM32Cube/STM32CubeMX/STM32CubeMX'
-alias eagle='/opt/eagle-9.6.2/eagle'
 # --------------------------------------------------------------------
 # その他
 # --------------------------------------------------------------------
