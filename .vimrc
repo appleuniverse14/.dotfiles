@@ -66,7 +66,7 @@ set cursorline
 set hlsearch
 set cindent
 
-packadd termdebug 
+packadd termdebug
 ""マウスを使用"
 set mouse=a
 let g:termdebug_wide = 163
@@ -98,3 +98,16 @@ augroup END
 
 "Python3のパス指定"
 let g:python3_host_prog = '/usr/local/bin/python3'
+"clang-format"
+function! s:clang_format()
+  let now_line = line(".")
+  exec ":%! clang-format"
+  exec ":" . now_line
+endfunction
+
+if executable('clang-format')
+  augroup cpp_clang_format
+    autocmd!
+    autocmd BufWrite,FileWritePre,FileAppendPre *.[ch]pp call s:clang_format()
+  augroup END
+endif
