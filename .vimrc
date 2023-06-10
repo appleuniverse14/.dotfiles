@@ -95,3 +95,6 @@ augroup vimrcEx
     \   exe "normal! g`\"" |
     \ endif
 augroup END
+
+"Python3のパス指定"
+let g:python3_host_prog = '/usr/local/bin/python3'

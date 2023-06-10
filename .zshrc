@@ -101,7 +101,7 @@ alias pbpaste='xsel --clipboard --output'
 alias v='nvim'
 alias cubeprogrammer='sudo /usr/local/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin/STM32CubeProgrammer'
 alias cubemx='sudo /usr/local/STMicroelectronics/STM32Cube/STM32CubeMX/STM32CubeMX'
-alias eagle='/opt/eagle-9.6.2/eagle'
+alias eagle='/mnt/c/EAGLE\ 9.6.2/eagle.exe'
 # --------------------------------------------------------------------
 # その他
 # --------------------------------------------------------------------
@@ -116,14 +116,18 @@ function gcc2(){
     CFILE=$(basename $1 .c);
     gcc -o $CFILE -ansi -pedantic -Wall -Wextra -g3 -O3 -std=c11 $FILENAME -lm;
 }
-# alias gcc=gcc2
+alias gcc=gcc2
 
 function g++2(){
     FILENAME=$(basename $1);
     CFILE=$(basename $1 .cpp);
     g++ -o $CFILE -ansi -pedantic -Wall -Wextra -g3 -std=c++11 $FILENAME -lm;
 }
-# alias g++=g++2
+alias g++=g++2
+
+function psgrep () {
+    ps aux | grep $1
+}
 
 # 端末起動時にtmuxセッションを開始
 if [[ ! -n $TMUX ]]; then

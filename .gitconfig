@@ -10,6 +10,7 @@
 	recurseSubmodules = check
 [core]
 	editor = vim
+	quotepath = false
 [alias]
 	cm = commit -m
 	ada = add -A
